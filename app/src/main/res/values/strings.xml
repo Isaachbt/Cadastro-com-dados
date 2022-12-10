@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Cadastro com dados</string>
+
+    <string-array name="estadoCivil">
+        <item>Solteiro</item>
+        <item>Viuvo(a)</item>
+        <item>Casado(a)</item>
+        <item>Divorciado</item>
+        <item>Morando juntos</item>
+    </string-array>
+</resources>

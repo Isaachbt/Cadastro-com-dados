@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.activity.EditarDadosActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center|top"
+        android:orientation="vertical"
+        tools:context=".activity.activity.EditarDadosActivity">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:text="Editar dados"
+            android:textColor="@color/black"
+            android:textSize="38dp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/editNomeEditarDados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginRight="20dp"
+            android:hint="Nome"
+            android:inputType="textLongMessage" />
+
+        <EditText
+            android:id="@+id/editIdadeEditarDados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:hint="Idade"
+            android:inputType="number" />
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginLeft="20dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioHomenEditarDados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Masculino"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioMulherEditarDados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Femenino"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/radioLgbtEditarDados"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Grupo lgbt"
+                android:textSize="15dp"
+                android:textStyle="bold"/>
+
+        </RadioGroup>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/edtCepEditarDados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:hint="Cep"
+                android:inputType="number" />
+
+            <Button
+                android:id="@+id/buscarCeEditarDados"
+                android:layout_width="86dp"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:backgroundTint="@color/botomLogin"
+                android:onClick="buscarCepEdicao"
+                android:text="Buscar"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <EditText
+                android:id="@+id/editRuaEdicao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="5dp"
+                android:layout_weight="1"
+                android:layout_marginRight="3dp"
+                android:hint="Rua"
+                android:inputType="textShortMessage|textLongMessage" />
+
+            <EditText
+                android:id="@+id/editNumeroEdicao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_weight="4"
+                android:layout_marginRight="20dp"
+                android:hint="N"
+                android:inputType="number" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/editBairroEditarDados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="20dp"
+            android:hint="Bairro"
+            android:inputType="textShortMessage|textLongMessage" />
+
+        <EditText
+            android:id="@+id/editCidadeEditarDados"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginRight="20dp"
+            android:hint="Cidade"
+            android:inputType="textShortMessage" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Estado civil:"
+                android:textSize="17dp"
+                android:layout_marginLeft="24dp"/>
+            <Spinner
+                android:id="@+id/spinnerEditarDados"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="20dp"
+                android:textAlignment="center"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSalvar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="20dp"
+            android:backgroundTint="@color/botomLogin"
+            android:onClick="btnSalvarAuteracaoes"
+            android:text="Salvar" />
+
+    </LinearLayout>
+
+
+</LinearLayout>
